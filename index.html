@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGO Offer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>YAY! It's BOGO</h2>
+        
+        <div class="product-option" onclick="toggleOptions(1)">
+            <div class="unit-info single-unit">
+                <div class="flex-card">
+                    <div style="display: flex;">
+                        <div>
+                            <input type="radio" name="unit" id="unit1" onclick="updatePrice(1)" checked>
+                            <label for="unit1">
+                        </div>
+                        <div>
+                            <span style="margin-left: 2%;">1 Unit</span> 
+                            <span class="discount">10% Off</span>
+                            <div>
+                                <span class="original-price" style="text-decoration: none;">Standard Price</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column">
+                            <span class="price">$10.00 USD</span>
+                            <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="options-grid expandable" id="options1">
+                <div class="flex-column">
+                    <div class="header">Size</div>
+                    <select class="select-box">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+                <div class="flex-column">
+                    <div class="header">Color</div>
+                    <select class="select-box">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-option popular" onclick="toggleOptions(2)">
+            <div style="display: flex; flex-direction: column;">
+                <div class="flex-card">
+                    <div style="display: flex;">
+                        <div>
+                            <input type="radio" name="unit" id="unit2" onclick="updatePrice(2)">
+                            <label for="unit2">
+                        </div>
+                        <div>
+                            <span>2 Unit <span class="discount">20% Off</span></span>
+                            <div>
+                                <span class="original-price" style="text-decoration: none;">Standard Price</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column">
+                        <span class="price">$18.00 USD</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+                <div class="options-grid expandable" id="options2">
+                    <div class="label-column">
+                        <div class="option-label">#1</div>
+                        <div class="option-label">#2</div>
+                    </div>
+                    <div class="flex-column">
+                        <div class="header">Size</div>
+                        <select class="select-box">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <select class="select-box">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </div>
+                    <div class="flex-column">
+                        <div class="header">Color</div>
+                        <select class="select-box">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Blue">Blue</option>
+                        </select>
+                        <select class="select-box">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Blue">Blue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-option" onclick="toggleOptions(3)">
+            <div class="flex-card">
+                <div style="display: flex;">
+                    <div>
+                        <input type="radio" name="unit" id="unit3" onclick="updatePrice(3)">
+                        <label for="unit3">
+                    </div>
+                    <div>
+                        <span>3 Unit <span class="discount">30% Off</span></span>
+                        <div>
+                            <span class="original-price" style="text-decoration: none;">Standard Price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit-info flex-column">
+                    <span class="price">$24.00 USD</span>
+                    <span class="original-price">$24.00 USD</span>
+                </div>
+            </div>
+            <div class="options-grid expandable" id="options3">
+                <div class="label-column">
+                    <div class="option-label">#1</div>
+                    <div class="option-label">#2</div>
+                </div>
+                    <div class="flex-column">
+                        <div class="header">Size</div>
+                        <select class="select-box">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                        <select class="select-box">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </div>
+                    <div class="flex-column">
+                        <div class="header">Color</div>
+                        <select class="select-box">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Blue">Blue</option>
+                        </select>
+                        <select class="select-box">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Blue">Blue</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <p><span style="color: #f25a8e;">Free Delivery</span></p>
+            <p>Total: <span id="total">$18.00 USD</span></p>
+        </div>
+
+        <button class="add-to-cart">+ Add to Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
